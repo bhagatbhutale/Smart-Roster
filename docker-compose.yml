@@ -1,0 +1,13 @@
+
+services:
+  mongodb:
+    image: mongo:8
+    container_name: smart-roster-db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - smart_roster_data:/data/db
+
+volumes:
+  smart_roster_data:
